@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bda-G7-ucR">
+                                <rect key="frame" x="171.5" y="96" width="31" height="30"/>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="playBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vb4-N0-Fjp"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-G4-Spl">
+                                <rect key="frame" x="39" y="141" width="297" height="31"/>
+                                <connections>
+                                    <action selector="volumnChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ICn-5c-bcK"/>
+                                </connections>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tOH-J1-LA5">
+                                <rect key="frame" x="41" y="201" width="293" height="2"/>
+                            </progressView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SYm-Wy-Uqp">
+                                <rect key="frame" x="105.5" y="231" width="164" height="29"/>
+                                <segments>
+                                    <segment title="左声道"/>
+                                    <segment title="均衡"/>
+                                    <segment title="右声道"/>
+                                </segments>
+                                <connections>
+                                    <action selector="panChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Xb-BO-9ul"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tOH-J1-LA5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="9Bo-Ux-RKc"/>
+                            <constraint firstItem="tOH-J1-LA5" firstAttribute="top" secondItem="DHS-G4-Spl" secondAttribute="bottom" constant="30" id="JVH-YM-mF7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tOH-J1-LA5" secondAttribute="trailing" constant="25" id="K3n-dq-0m4"/>
+                            <constraint firstItem="bda-G7-ucR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="PZU-RP-DNN"/>
+                            <constraint firstItem="SYm-Wy-Uqp" firstAttribute="top" secondItem="tOH-J1-LA5" secondAttribute="bottom" constant="28" id="XGL-xB-Blm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DHS-G4-Spl" secondAttribute="trailing" constant="25" id="a7B-RW-cWe"/>
+                            <constraint firstItem="bda-G7-ucR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLa-bL-SZm"/>
+                            <constraint firstItem="DHS-G4-Spl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="qLp-sF-ICy"/>
+                            <constraint firstItem="SYm-Wy-Uqp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWD-Mh-Dj6"/>
+                            <constraint firstItem="DHS-G4-Spl" firstAttribute="top" secondItem="bda-G7-ucR" secondAttribute="bottom" constant="15" id="wGT-vm-3dQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="tOH-J1-LA5" id="s8G-WQ-fvJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
