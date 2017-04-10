@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2FC02B1E76A02C0091D828 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2FC02A1E76A02C0091D828 /* MediaPlayer.framework */; };
 		7C7997A31E65583700938EC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7997A21E65583700938EC4 /* main.m */; };
 		7C7997A61E65583700938EC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7997A51E65583700938EC4 /* AppDelegate.m */; };
 		7C7997A91E65583700938EC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7997A81E65583700938EC4 /* ViewController.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C2FC02A1E76A02C0091D828 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7C79979E1E65583700938EC4 /* AVAudioPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVAudioPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7997A21E65583700938EC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C7997A41E65583700938EC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C2FC02B1E76A02C0091D828 /* MediaPlayer.framework in Frameworks */,
 				7C7997DA1E65701D00938EC4 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +166,7 @@
 		7C7997D81E65701C00938EC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C2FC02A1E76A02C0091D828 /* MediaPlayer.framework */,
 				7C7997D91E65701D00938EC4 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -237,6 +241,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9UL567ZJ57;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7C7997B61E65583700938EC4 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -542,6 +551,7 @@
 				7C7997CD1E65583700938EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C7997CE1E65583700938EC4 /* Build configuration list for PBXNativeTarget "AVAudioPlayerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +560,7 @@
 				7C7997D01E65583700938EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C7997D11E65583700938EC4 /* Build configuration list for PBXNativeTarget "AVAudioPlayerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +569,7 @@
 				7C7997D31E65583700938EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

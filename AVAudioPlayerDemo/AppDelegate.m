@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -16,9 +17,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //告诉系统，我们要接受远程控制事件
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+    
+    
+
     return YES;
 }
+
+//- (BOOL)canBecomeFirstResponder{
+//    return YES;
+//}
+//
+//- (void)remoteControlReceivedWithEvent:(UIEvent *)receivedEvent {
+//    if (receivedEvent.type == UIEventTypeRemoteControl) {
+//        switch (receivedEvent.subtype) {
+//                case UIEventSubtypeRemoteControlPlay:
+//                //[self.playCenter midBtnClicked:nil];
+//                NSLog(@"暂停播放");
+//                break;
+//                case UIEventSubtypeRemoteControlPause:
+//                // [self.playCenter midBtnClicked:nil];
+//                NSLog(@"继续播放");
+//                break;
+//                case UIEventSubtypeRemoteControlNextTrack:
+//                NSLog(@"下一曲");
+//                break;
+//                case UIEventSubtypeRemoteControlPreviousTrack:
+//                NSLog(@"上一曲");
+//                break;
+//            default:
+//                break;
+//        }
+//    }
+//}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
